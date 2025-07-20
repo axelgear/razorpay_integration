@@ -12,8 +12,8 @@ def get_razorpay_client():
             frappe.throw("Sandbox API Key and Secret are required when Sandbox Mode is enabled.")
         client = razorpay.Client(auth=(settings.sandbox_api_key, settings.sandbox_api_secret))
     else:
-        if not settings.api_key or not settings.api_secret:
-            frappe.throw("API Key and Secret are required for production mode.")
-        client = razorpay.Client(auth=(settings.api_key, settings.api_secret))
+        if not settings.production_api_key or not settings.production_api_secret:
+            frappe.throw("Production API Key and Secret are required for production mode.")
+        client = razorpay.Client(auth=(settings.production_api_key, settings.production_api_secret))
     
     return client, sandbox_mode

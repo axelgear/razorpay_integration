@@ -11,18 +11,37 @@
       "description": "Enable Razorpay Integration for this site."
     },
     {
-      "fieldname": "api_key",
-      "label": "API Key",
+      "fieldname": "production_api_key",
+      "label": "Production API Key",
       "fieldtype": "Data",
       "reqd": 1,
-      "description": "Razorpay API Key ID from your Razorpay Dashboard."
+      "description": "Razorpay API Key ID from your Razorpay Dashboard (Production)."
     },
     {
-      "fieldname": "api_secret",
-      "label": "API Secret",
+      "fieldname": "production_api_secret",
+      "label": "Production API Secret",
       "fieldtype": "Password",
       "reqd": 1,
-      "description": "Razorpay API Secret Key from your Razorpay Dashboard."
+      "description": "Razorpay API Secret Key from your Razorpay Dashboard (Production)."
+    },
+    {
+      "fieldname": "sandbox_api_key",
+      "label": "Sandbox API Key",
+      "fieldtype": "Data",
+      "description": "Razorpay API Key ID for testing (Sandbox)."
+    },
+    {
+      "fieldname": "sandbox_api_secret",
+      "label": "Sandbox API Secret",
+      "fieldtype": "Password",
+      "description": "Razorpay API Secret Key for testing (Sandbox)."
+    },
+    {
+      "fieldname": "use_sandbox",
+      "label": "Use Sandbox",
+      "fieldtype": "Check",
+      "default": 0,
+      "description": "Enable to use sandbox credentials for testing."
     },
     {
       "fieldname": "webhook_secret",
@@ -30,13 +49,6 @@
       "fieldtype": "Data",
       "reqd": 1,
       "description": "Webhook Secret from Razorpay Dashboard for payment callbacks."
-    },
-    {
-      "fieldname": "sandbox_mode",
-      "label": "Sandbox Mode",
-      "fieldtype": "Check",
-      "default": 1,
-      "description": "Enable Sandbox mode for testing payments."
     },
     {
       "fieldname": "zohocliq_enabled",
