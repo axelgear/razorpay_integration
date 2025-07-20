@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quotation {{ quotation.name }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { text-align: center; }
+        .details { margin-top: 20px; }
+        .items-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .items-table th, .items-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .qr-code { margin-top: 20px; text-align: center; }
+        .qr-code img { max-width: 200px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Quotation {{ quotation.name }}</h1>
+        <p>Customer: {{ quotation.customer_name }}</p>
+        <p>Date: {{ quotation.transaction_date }}</p>
+    </div>
+    <div class="details">
+        <p><strong>Company:</strong> {{ quotation.company }}</p>
+        <p><strong>Valid Till:</strong> {{ quotation.valid_till }}</p>
+        <p><strong>Total Amount:</strong> {{ quotation.grand_total }} {{ quotation.currency }}</p>
+        <p><strong>Advance Paid:</strong> {{ quotation.custom_advance_amount or 0 }} {{ quotation.currency }}</p>
+    </div>
+    <h2>Items</h2>
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Rate</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in quotation.items %}
+            <tr>
+                <td>{{ item.item_code }}</td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.qty }}</td>
+                <td>{{ item.rate }}</td>
+                <td>{{ item.amount }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% if quotation.custom_qr_code %}
+    <div class="qr-code">
+        <h2>Scan to Pay</h2>
+        <img src="{{ quotation.custom_qr_code }}" alt="Payment QR Code">
+        <p>Scan the QR code to make a payment for this quotation.</p>
+    </div>
+    {% endif %}
+</body>
+</html>

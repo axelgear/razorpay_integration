@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Slip</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { text-align: center; }
+        .details { margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Payment Slip</h1>
+        <h3>Razorpay Payment: {{ payment.name }}</h3>
+    </div>
+    <div class="details">
+        <table>
+            <tr><th>Customer</th><td>{{ customer.customer_name }}</td></tr>
+            <tr><th>Quotation</th><td>{{ quotation.name }}</td></tr>
+            <tr><th>Amount</th><td>{{ payment.amount }}</td></tr>
+            <tr><th>Amount Paid</th><td>{{ payment.amount_paid }}</td></tr>
+            <tr><th>Status</th><td>{{ payment.status }}</td></tr>
+            <tr><th>Payment ID</th><td>{{ payment.payment_id }}</td></tr>
+            <tr><th>Created At</th><td>{{ payment.created_at }}</td></tr>
+        </table>
+    </div>
+</body>
+</html>

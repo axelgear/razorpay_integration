@@ -1,0 +1,24 @@
+{
+  "custom_fields": [
+    {
+      "fieldname": "payment_link_id",
+      "fieldtype": "Data",
+      "label": "Payment Link ID",
+      "mandatory": 1
+    }
+  ],
+  "doctype": "Report",
+  "is_standard": "Yes",
+  "name": "Payment Link Transactions",
+  "report_name": "Payment Link Transactions",
+  "report_type": "Script Report",
+  "module": "Razorpay Integration",
+  "filters": [
+    {
+      "fieldname": "payment_link_id",
+      "fieldtype": "Data",
+      "label": "Payment Link ID",
+      "mandatory": 1
+    }
+  ]
+}

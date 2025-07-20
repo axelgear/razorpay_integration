@@ -1,0 +1,48 @@
+razorpay_integration/
+├── razorpay_integration
+│   ├── config
+│   │   └── desktop.py
+│   ├── modules.txt
+│   ├── public
+│   │   ├── js
+│   │   │   └── quotation.js
+│   │   ├── templates
+│   │   │   ├── payment_slip.html
+│   │   │   └── quotation_print.html
+│   ├── razorpay_integration
+│   │   ├── doctype
+│   │   │   ├── razorpay_settings
+│   │   │   │   ├── razorpay_settings.py
+│   │   │   │   ├── razorpay_settings.json
+│   │   │   ├── razorpay_payment
+│   │   │   │   ├── razorpay_payment.py
+│   │   │   │   ├── razorpay_payment.json
+│   │   │   ├── razorpay_payment_transactions
+│   │   │   │   ├── razorpay_payment_transactions.py
+│   │   │   │   ├── razorpay_payment_transactions.json
+│   │   │   ├── razorpay_settlement
+│   │   │   │   ├── razorpay_settlement.py
+│   │   │   │   ├── razorpay_settlement.json
+│   │   │   ├── razorpay_settlement_transactions
+│   │   │   │   ├── razorpay_settlement_transactions.py
+│   │   │   │   ├── razorpay_settlement_transactions.json
+│   │   │   ├── razorpay_analytics
+│   │   │   │   ├── razorpay_analytics.py
+│   │   │   │   ├── razorpay_analytics.json
+│   │   │   ├── razorpay_virtual_account
+│   │   │   │   ├── razorpay_virtual_account.py
+│   │   │   │   ├── razorpay_virtual_account.json
+│   │   ├── __init__.py
+│   │   ├── razorpay_client.py
+│   │   ├── utils.py
+│   │   ├── zohocliq.py
+│   │   ├── receipt_generator.py
+│   │   ├── dashboard.py
+│   │   ├── reports
+│   │   │   ├── payment_link_transactions
+│   │   │   │   ├── payment_link_transactions.py
+│   │   │   │   ├── payment_link_transactions.json
+│   │   └── hooks.py
+├── setup.py
+├── requirements.txt
+└── README.md

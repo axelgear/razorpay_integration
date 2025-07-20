@@ -1,0 +1,3 @@
+razorpay
+qrcode
+Pillow

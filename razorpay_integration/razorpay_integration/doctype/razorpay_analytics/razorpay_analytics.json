@@ -1,0 +1,27 @@
+{
+  "custom_fields": [
+    {
+      "fieldname": "settlement_id",
+      "fieldtype": "Data",
+      "label": "Settlement ID"
+    },
+    {
+      "fieldname": "amount",
+      "fieldtype": "Currency",
+      "label": "Amount"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Data",
+      "label": "Status"
+    },
+    {
+      "fieldname": "created_at",
+      "fieldtype": "Datetime",
+      "label": "Created At"
+    }
+  ],
+  "doctype": "Razorpay Analytics",
+  "issingle": 0,
+  "name": "Razorpay Analytics"
+}

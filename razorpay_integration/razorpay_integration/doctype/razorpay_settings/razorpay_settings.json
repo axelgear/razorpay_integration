@@ -1,0 +1,76 @@
+{
+  "custom_fields": [
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "0"
+    },
+    {
+      "fieldname": "use_sandbox",
+      "fieldtype": "Check",
+      "label": "Use Sandbox Mode",
+      "default": "0"
+    },
+    {
+      "fieldname": "api_key",
+      "fieldtype": "Data",
+      "label": "Production API Key",
+      "hidden": 0
+    },
+    {
+      "fieldname": "api_secret",
+      "fieldtype": "Password",
+      "label": "Production API Secret",
+      "hidden": 0
+    },
+    {
+      "fieldname": "sandbox_api_key",
+      "fieldtype": "Data",
+      "label": "Sandbox API Key",
+      "hidden": 0
+    },
+    {
+      "fieldname": "sandbox_api_secret",
+      "fieldtype": "Password",
+      "label": "Sandbox API Secret",
+      "hidden": 0
+    },
+    {
+      "fieldname": "webhook_secret",
+      "fieldtype": "Password",
+      "label": "Webhook Secret",
+      "mandatory": 1
+    },
+    {
+      "fieldname": "accounts_email",
+      "fieldtype": "Data",
+      "label": "Accounts Email",
+      "options": "Email"
+    },
+    {
+      "fieldname": "enable_zohocliq",
+      "fieldtype": "Check",
+      "label": "Enable ZohoCliq Notifications",
+      "default": "0"
+    },
+    {
+      "fieldname": "zohocliq_webhook_url",
+      "fieldtype": "Data",
+      "label": "ZohoCliq Webhook URL"
+    },
+    {
+      "fieldname": "accounts_channel_id",
+      "fieldtype": "Data",
+      "label": "Accounts Channel ID"
+    },
+    {
+      "fieldname": "project_channel_id",
+      "fieldtype": "Data",
+      "label": "Project Channel ID"
+    }
+  ],
+  "doctype": "Razorpay Settings",
+  "issingle": 1,
+  "name": "Razorpay Settings"
+}
