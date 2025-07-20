@@ -22,17 +22,25 @@ A custom ERPNext app that integrates Razorpay's payment gateway and Smart Collec
 - **Quotation Versioning**: Advance amounts carried forward on revision.
 
 ## Installation
-1. Install the app:
+1. Get the app (skipping asset build to avoid errors):
+   ```bash
+   bench get-app https://github.com/axelgear/razorpay_integration.git --branch main --skip-assets
+   ```
+2. Add the app to apps.txt (edit frappe-bench/sites/apps.txt and append 'razorpay_integration' on a new line).
+3. Install the app on your site:
    ```bash
    bench --site [your-site-name] install-app razorpay_integration
-
-Install dependencies:pip install -r apps/razorpay_integration/requirements.txt
-
-
-Run migrations:bench migrate
-bench build
-bench restart
-
+   ```
+4. Install dependencies:
+   ```bash
+   pip install -r apps/razorpay_integration/requirements.txt
+   ```
+5. Run migrations and build:
+   ```bash
+   bench migrate
+   bench build --app razorpay_integration
+   bench restart
+   ```
 
 Configuration
 Go to Razorpay Integration Settings in ERPNext.

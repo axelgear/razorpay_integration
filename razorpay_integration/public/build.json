@@ -1,0 +1,8 @@
+{
+    "js/quotation.js": [
+        "public/js/quotation.js"
+    ],
+    "js/customer.js": [
+        "public/js/customer.js"
+    ]
+} 
