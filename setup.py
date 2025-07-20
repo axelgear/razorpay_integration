@@ -9,5 +9,11 @@ setup(
         "frappe",
         "razorpay",
         "requests"
-    ]
+    ],
+    author="Rejith R",
+    author_email="rejithr1995@gmail.com",
+    description="Razorpay Integration for ERPNext",
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    license="MIT"
 )
