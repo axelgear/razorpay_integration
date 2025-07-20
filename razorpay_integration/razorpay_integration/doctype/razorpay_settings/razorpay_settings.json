@@ -11,18 +11,43 @@
       "description": "Enable Razorpay Integration for this site."
     },
     {
-      "fieldname": "api_key",
-      "label": "API Key",
-      "fieldtype": "Data",
-      "reqd": 1,
-      "description": "Razorpay API Key ID from your Razorpay Dashboard."
+      "fieldname": "sandbox_mode",
+      "label": "Sandbox Mode",
+      "fieldtype": "Check",
+      "default": 1,
+      "description": "Enable Sandbox mode for testing payments."
     },
     {
-      "fieldname": "api_secret",
-      "label": "API Secret",
-      "fieldtype": "Password",
+      "fieldname": "sandbox_api_key",
+      "label": "Sandbox API Key",
+      "fieldtype": "Data",
+      "depends_on": "eval:doc.sandbox_mode",
       "reqd": 1,
-      "description": "Razorpay API Secret Key from your Razorpay Dashboard."
+      "description": "Razorpay API Key ID for sandbox mode."
+    },
+    {
+      "fieldname": "sandbox_api_secret",
+      "label": "Sandbox API Secret",
+      "fieldtype": "Password",
+      "depends_on": "eval:doc.sandbox_mode",
+      "reqd": 1,
+      "description": "Razorpay API Secret Key for sandbox mode."
+    },
+    {
+      "fieldname": "production_api_key",
+      "label": "Production API Key",
+      "fieldtype": "Data",
+      "depends_on": "eval:!doc.sandbox_mode",
+      "reqd": 1,
+      "description": "Razorpay API Key ID for production mode."
+    },
+    {
+      "fieldname": "production_api_secret",
+      "label": "Production API Secret",
+      "fieldtype": "Password",
+      "depends_on": "eval:!doc.sandbox_mode",
+      "reqd": 1,
+      "description": "Razorpay API Secret Key for production mode."
     },
     {
       "fieldname": "webhook_secret",
@@ -30,13 +55,6 @@
       "fieldtype": "Data",
       "reqd": 1,
       "description": "Webhook Secret from Razorpay Dashboard for payment callbacks."
-    },
-    {
-      "fieldname": "sandbox_mode",
-      "label": "Sandbox Mode",
-      "fieldtype": "Check",
-      "default": 1,
-      "description": "Enable Sandbox mode for testing payments."
     },
     {
       "fieldname": "zohocliq_enabled",

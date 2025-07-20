@@ -27,10 +27,12 @@ doc_events = {
         "after_insert": "razorpay_integration.razorpay_integration.zohocliq.create_project_thread"
     },
     "Task": {
-        "after_insert": "razorpay_integration.razorpay_integration.utils.notify_task_assignment"
+        "after_insert": "razorpay_integration.razorpay_integration.utils.notify_task_assignment",
+        "after_insert": "razorpay_integration.hooks.task.after_insert"
     },
     "Sales Order": {
-        "after_insert": "razorpay_integration.razorpay_integration.utils.notify_sales_order_creation"
+        "after_insert": "razorpay_integration.razorpay_integration.utils.notify_sales_order_creation",
+        "after_insert": "razorpay_integration.hooks.sales_order.after_insert"
     },
     "Customer": {
         "after_insert": "razorpay_integration.razorpay_integration.utils.generate_customer_uuid",

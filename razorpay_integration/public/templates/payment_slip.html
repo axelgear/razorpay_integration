@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Payment Slip</title>
     <style>
-        .payment-slip { font-family: Arial, sans-serif; padding: 20px; border: 1px solid #ddd; }
-        .header { text-align: center; }
-        .details { margin-top: 20px; }
+      .payment-slip {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        border: 1px solid #ddd;
+      }
+      .header {
+        text-align: center;
+      }
+      .details {
+        margin-top: 20px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="payment-slip">
-        <div class="header">
-            <h2>Payment Slip</h2>
-            <p>Razorpay Payment: {{ payment.name }}</p>
-        </div>
-        <div class="details">
-            <p><strong>Customer:</strong> {{ customer.customer_name }}</p>
-            {% if quotation %}
-            <p><strong>Quotation:</strong> {{ quotation.name }}</p>
-            <p><strong>Quotation Amount:</strong> {{ quotation.grand_total }} {{ quotation.currency }}</p>
-            {% endif %}
-            <p><strong>Amount Paid:</strong> {{ payment.amount_paid }} {{ quotation.currency if quotation else "INR" }}</p>
-            <p><strong>Status:</strong> {{ payment.status }}</p>
-            <p><strong>Payment ID:</strong> {{ payment.payment_id or "N/A" }}</p>
-            <p><strong>Payment Link:</strong> {{ payment.payment_link or "N/A" }}</p>
-            <p><strong>Date:</strong> {{ payment.created_at }}</p>
-        </div>
+      <div class="header">
+        <h2>Payment Slip</h2>
+        <p>Razorpay Payment: {{ payment.name }}</p>
+      </div>
+      <div class="details">
+        <p><strong>Customer:</strong> {{ customer.customer_name }}</p>
+        {% if quotation %}
+        <p><strong>Quotation:</strong> {{ quotation.name }}</p>
+        <p>
+          <strong>Quotation Amount:</strong> {{ quotation.grand_total }} {{
+          quotation.currency }}
+        </p>
+        {% endif %}
+        <p>
+          <strong>Amount Paid:</strong> {{ payment.amount_paid }} {{
+          quotation.currency if quotation else "INR" }}
+        </p>
+        <p><strong>Status:</strong> {{ payment.status }}</p>
+        <p><strong>Payment ID:</strong> {{ payment.payment_id or "N/A" }}</p>
+        {% if quotation.custom_qr_code %}
+        <img
+          src="{{ quotation.custom_qr_code }}"
+          alt="QR Code"
+          style="width: 100px; height: 100px"
+        />
+        {% endif %}
+        <p>
+          <strong>Payment Link:</strong> {{ payment.payment_link or "N/A" }}
+        </p>
+        <p><strong>Date:</strong> {{ payment.created_at }}</p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
