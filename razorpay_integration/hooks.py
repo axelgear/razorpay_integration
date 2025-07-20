@@ -14,8 +14,8 @@ webhooks = {
 }
 
 app_include_js = [
-    "/assets/razorpay_integration/js/quotation.bundle.js",
-    "/assets/razorpay_integration/js/customer.bundle.js"
+    "/assets/razorpay_integration/js/quotation.js",
+    "/assets/razorpay_integration/js/customer.js"
 ]
 
 doc_events = {
