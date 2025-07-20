@@ -1,10 +1,10 @@
 app_name = "razorpay_integration"
 app_title = "Razorpay Integration"
-app_publisher = "Axelgear"
+app_publisher = "Your Name"
 app_description = "Razorpay Integration for ERPNext"
 app_icon = "octicon octicon-credit-card"
 app_color = "blue"
-app_email = "rejithr1995@gmail.com"
+app_email = "your.email@example.com"
 app_license = "MIT"
 
 webhooks = {
@@ -62,20 +62,22 @@ def handle_quotation_revision(doc, method):
     if doc.__islocal or not doc.__previous_doc:
         return
     previous = doc.__previous_doc
-    frappe.get_doc("Razorpay Payment", {"quotation": previous.name}, "update_payment_link_on_revision", doc, previous)
+    payment_doc = frappe.get_all("Razorpay Payment", filters={"quotation": previous.name, "status": ["!=", "Cancelled"]}, limit=1)
+    if payment_doc:
+        frappe.get_doc("Razorpay Payment", payment_doc[0].name).update_payment_link_on_revision(doc, previous)
 
 def notify_task_assignment(doc, method):
-    settings = frappe.get_single("Razorpay Settings")
-    if settings.enable_zohocliq and settings.project_channel_id:
+    settings = frappe.get_single("Razorpay Integration Settings")
+    if settings.zohocliq_enabled and settings.zohocliq_webhook_url:
         post_to_zohocliq(
             message=f"New Task Assigned: {doc.subject}, Project: {doc.project or 'None'}",
-            channel_id=settings.project_channel_id
+            webhook_url=settings.zohocliq_webhook_url
         )
 
 def notify_sales_order_creation(doc, method):
-    settings = frappe.get_single("Razorpay Settings")
-    if settings.enable_zohocliq and settings.accounts_channel_id:
+    settings = frappe.get_single("Razorpay Integration Settings")
+    if settings.zohocliq_enabled and settings.zohocliq_webhook_url:
         post_to_zohocliq(
             message=f"New Sales Order Created: {doc.name}, Customer: {doc.customer}, Amount: {doc.grand_total}",
-            channel_id=settings.accounts_channel_id
+            webhook_url=settings.zohocliq_webhook_url
         )

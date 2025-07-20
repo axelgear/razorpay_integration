@@ -34,7 +34,8 @@
     {
       "fieldname": "accept_partial",
       "fieldtype": "Check",
-      "label": "Accept Partial Payments"
+      "label": "Accept Partial Payments",
+      "default": "eval:frappe.get_single('Razorpay Integration Settings').allow_partial_payments"
     },
     {
       "fieldname": "first_min_partial_amount",

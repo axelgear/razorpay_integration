@@ -1,76 +1,87 @@
 {
-  "custom_fields": [
+  "doctype": "Razorpay Integration Settings",
+  "issingle": 1,
+  "name": "Razorpay Integration Settings",
+  "fields": [
     {
       "fieldname": "enabled",
-      "fieldtype": "Check",
       "label": "Enabled",
-      "default": "0"
-    },
-    {
-      "fieldname": "use_sandbox",
       "fieldtype": "Check",
-      "label": "Use Sandbox Mode",
-      "default": "0"
+      "default": 0,
+      "description": "Enable Razorpay Integration for this site."
     },
     {
       "fieldname": "api_key",
+      "label": "API Key",
       "fieldtype": "Data",
-      "label": "Production API Key",
-      "hidden": 0
+      "reqd": 1,
+      "description": "Razorpay API Key ID from your Razorpay Dashboard."
     },
     {
       "fieldname": "api_secret",
+      "label": "API Secret",
       "fieldtype": "Password",
-      "label": "Production API Secret",
-      "hidden": 0
-    },
-    {
-      "fieldname": "sandbox_api_key",
-      "fieldtype": "Data",
-      "label": "Sandbox API Key",
-      "hidden": 0
-    },
-    {
-      "fieldname": "sandbox_api_secret",
-      "fieldtype": "Password",
-      "label": "Sandbox API Secret",
-      "hidden": 0
+      "reqd": 1,
+      "description": "Razorpay API Secret Key from your Razorpay Dashboard."
     },
     {
       "fieldname": "webhook_secret",
-      "fieldtype": "Password",
       "label": "Webhook Secret",
-      "mandatory": 1
-    },
-    {
-      "fieldname": "accounts_email",
       "fieldtype": "Data",
-      "label": "Accounts Email",
-      "options": "Email"
+      "reqd": 1,
+      "description": "Webhook Secret from Razorpay Dashboard for payment callbacks."
     },
     {
-      "fieldname": "enable_zohocliq",
+      "fieldname": "sandbox_mode",
+      "label": "Sandbox Mode",
       "fieldtype": "Check",
-      "label": "Enable ZohoCliq Notifications",
-      "default": "0"
+      "default": 1,
+      "description": "Enable Sandbox mode for testing payments."
+    },
+    {
+      "fieldname": "zohocliq_enabled",
+      "label": "ZohoCliq Notifications",
+      "fieldtype": "Check",
+      "default": 0,
+      "description": "Enable notifications via ZohoCliq for payments and refunds."
     },
     {
       "fieldname": "zohocliq_webhook_url",
+      "label": "ZohoCliq Webhook URL",
       "fieldtype": "Data",
-      "label": "ZohoCliq Webhook URL"
+      "depends_on": "eval:doc.zohocliq_enabled",
+      "description": "Webhook URL for ZohoCliq notifications."
     },
     {
-      "fieldname": "accounts_channel_id",
-      "fieldtype": "Data",
-      "label": "Accounts Channel ID"
+      "fieldname": "default_expiry_days",
+      "label": "Default Expiry Days",
+      "fieldtype": "Int",
+      "default": 7,
+      "description": "Default number of days until payment links expire."
     },
     {
-      "fieldname": "project_channel_id",
+      "fieldname": "allow_partial_payments",
+      "label": "Allow Partial Payments",
+      "fieldtype": "Check",
+      "default": 0,
+      "description": "Allow partial payments for payment links."
+    },
+    {
+      "fieldname": "virtual_account_prefix",
+      "label": "Virtual Account Prefix",
       "fieldtype": "Data",
-      "label": "Project Channel ID"
+      "default": "VA-",
+      "description": "Prefix for virtual account numbers."
     }
   ],
-  "doctype": "Razorpay Settings",
-  "issingle": 1,
-  "name": "Razorpay Settings"
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
 }

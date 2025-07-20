@@ -34,7 +34,20 @@ bench build
 bench restart
 
 
-
+Configuration
+Go to Razorpay Integration Settings in ERPNext.
+Enter:
+API Key and API Secret (from Razorpay Dashboard for live or sandbox mode).
+Webhook Secret (for webhook verification).
+ZohoCliq Webhook URL (from ZohoCliq for notifications).
+Default Expiry Days (default: 7 days for payment link expiry).
+Allow Partial Payments (enable/disable partial payments for payment links).
+Virtual Account Prefix (default: VA- for virtual account IDs).
+Check Enabled to activate the integration.
+Check Sandbox Mode to enable sandbox testing, or uncheck for live mode.
+Check ZohoCliq Notifications to enable notifications.
+Set up Razorpay webhooks in the Razorpay Dashboard:
+`https://your-site.com/api/method/razorpay_integration.razorpay_integration.utils.handle
 Configuration
 
 Set up Razorpay webhooks in the Razorpay Dashboard:
