@@ -1,0 +1,87 @@
+{
+  "doctype": "Razorpay Integration Settings",
+  "issingle": 1,
+  "name": "Razorpay Integration Settings",
+  "fields": [
+    {
+      "fieldname": "enabled",
+      "label": "Enabled",
+      "fieldtype": "Check",
+      "default": 0,
+      "description": "Enable Razorpay Integration for this site."
+    },
+    {
+      "fieldname": "api_key",
+      "label": "API Key",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "description": "Razorpay API Key ID from your Razorpay Dashboard."
+    },
+    {
+      "fieldname": "api_secret",
+      "label": "API Secret",
+      "fieldtype": "Password",
+      "reqd": 1,
+      "description": "Razorpay API Secret Key from your Razorpay Dashboard."
+    },
+    {
+      "fieldname": "webhook_secret",
+      "label": "Webhook Secret",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "description": "Webhook Secret from Razorpay Dashboard for payment callbacks."
+    },
+    {
+      "fieldname": "sandbox_mode",
+      "label": "Sandbox Mode",
+      "fieldtype": "Check",
+      "default": 1,
+      "description": "Enable Sandbox mode for testing payments."
+    },
+    {
+      "fieldname": "zohocliq_enabled",
+      "label": "ZohoCliq Notifications",
+      "fieldtype": "Check",
+      "default": 0,
+      "description": "Enable notifications via ZohoCliq for payments and refunds."
+    },
+    {
+      "fieldname": "zohocliq_webhook_url",
+      "label": "ZohoCliq Webhook URL",
+      "fieldtype": "Data",
+      "depends_on": "eval:doc.zohocliq_enabled",
+      "description": "Webhook URL for ZohoCliq notifications."
+    },
+    {
+      "fieldname": "default_expiry_days",
+      "label": "Default Expiry Days",
+      "fieldtype": "Int",
+      "default": 7,
+      "description": "Default number of days until payment links expire."
+    },
+    {
+      "fieldname": "allow_partial_payments",
+      "label": "Allow Partial Payments",
+      "fieldtype": "Check",
+      "default": 0,
+      "description": "Allow partial payments for payment links."
+    },
+    {
+      "fieldname": "virtual_account_prefix",
+      "label": "Virtual Account Prefix",
+      "fieldtype": "Data",
+      "default": "VA-",
+      "description": "Prefix for virtual account numbers."
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "doctype": "Razorpay Payment",
+  "issingle": 0,
+  "name": "Razorpay Payment",
+  "fields": [
+    {
+      "fieldname": "customer",
+      "fieldtype": "Link",
+      "options": "Customer",
+      "label": "Customer",
+      "reqd": 1
+    },
+    {
+      "fieldname": "quotation",
+      "fieldtype": "Link",
+      "options": "Quotation",
+      "label": "Quotation"
+    },
+    {
+      "fieldname": "project",
+      "fieldtype": "Link",
+      "options": "Project",
+      "label": "Project"
+    },
+    {
+      "fieldname": "sales_order",
+      "fieldtype": "Link",
+      "options": "Sales Order",
+      "label": "Sales Order"
+    },
+    {
+      "fieldname": "amount",
+      "fieldtype": "Currency",
+      "label": "Amount",
+      "reqd": 1
+    },
+    {
+      "fieldname": "accept_partial",
+      "fieldtype": "Check",
+      "label": "Accept Partial Payments",
+      "default": "eval:frappe.get_single('Razorpay Integration Settings').allow_partial_payments"
+    },
+    {
+      "fieldname": "first_min_partial_amount",
+      "fieldtype": "Currency",
+      "label": "First Minimum Partial Amount"
+    },
+    {
+      "fieldname": "expire_by",
+      "fieldtype": "Date",
+      "label": "Expiry Date"
+    },
+    {
+      "fieldname": "upi_link",
+      "fieldtype": "Check",
+      "label": "UPI Payment Link"
+    },
+    {
+      "fieldname": "reference_id",
+      "fieldtype": "Data",
+      "label": "Reference ID"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Data",
+      "label": "Description"
+    },
+    {
+      "fieldname": "notify_sms",
+      "fieldtype": "Check",
+      "label": "Notify via SMS",
+      "default": "1"
+    },
+    {
+      "fieldname": "notify_email",
+      "fieldtype": "Check",
+      "label": "Notify via Email",
+      "default": "1"
+    },
+    {
+      "fieldname": "reminder_enable",
+      "fieldtype": "Check",
+      "label": "Enable Reminders",
+      "default": "1"
+    },
+    {
+      "fieldname": "options",
+      "fieldtype": "JSON",
+      "label": "Options"
+    },
+    {
+      "fieldname": "order_id",
+      "fieldtype": "Data",
+      "label": "Order ID",
+      "read_only": 1
+    },
+    {
+      "fieldname": "subscription_id",
+      "fieldtype": "Data",
+      "label": "Subscription ID",
+      "read_only": 1
+    },
+    {
+      "fieldname": "payment_id",
+      "fieldtype": "Data",
+      "label": "Payment ID",
+      "read_only": 1
+    },
+    {
+      "fieldname": "refund_id",
+      "fieldtype": "Data",
+      "label": "Refund ID",
+      "read_only": 1
+    },
+    {
+      "fieldname": "payment_link_id",
+      "fieldtype": "Data",
+      "label": "Payment Link ID",
+      "read_only": 1
+    },
+    {
+      "fieldname": "payment_link_reference_id",
+      "fieldtype": "Data",
+      "label": "Payment Link Reference ID",
+      "read_only": 1
+    },
+    {
+      "fieldname": "payment_link_status",
+      "fieldtype": "Data",
+      "label": "Payment Link Status",
+      "read_only": 1
+    },
+    {
+      "fieldname": "payment_link",
+      "fieldtype": "URL",
+      "label": "Payment Link",
+      "read_only": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "Created\nPartially Paid\nPaid\nFailed\nRefunded\nCancelled",
+      "label": "Status"
+    },
+    {
+      "fieldname": "amount_paid",
+      "fieldtype": "Currency",
+      "label": "Amount Paid",
+      "read_only": 1
+    },
+    {
+      "fieldname": "created_at",
+      "fieldtype": "Datetime",
+      "label": "Created At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Table",
+      "options": "Note",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "payment_slip",
+      "fieldtype": "Attach",
+      "label": "Payment Slip",
+      "read_only": 1
+    },
+    {
+      "fieldname": "transactions",
+      "fieldtype": "Table",
+      "options": "Razorpay Payment Transactions",
+      "label": "Payment Transactions"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

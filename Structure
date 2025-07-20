@@ -1,48 +1,75 @@
 razorpay_integration/
-├── razorpay_integration
-│   ├── config
-│   │   └── desktop.py
-│   ├── modules.txt
-│   ├── public
-│   │   ├── js
-│   │   │   └── quotation.js
-│   │   ├── templates
+├── __init__.py
+├── hooks.py
+├── README.md
+├── requirements.txt
+├── setup.py
+├── pyproject.toml
+├── razorpay_integration/
+│   ├── __init__.py
+│   ├── config/
+│   │   ├── __init__.py
+│   │   ├── desktop.py
+│   ├── api/
+│   │   ├── __init__.py
+│   ├── public/
+│   │   ├── js/
+│   │   │   ├── customer.js
+│   │   │   ├── quotation.js
+│   │   ├── templates/
 │   │   │   ├── payment_slip.html
-│   │   │   └── quotation_print.html
-│   ├── razorpay_integration
-│   │   ├── doctype
-│   │   │   ├── razorpay_settings
-│   │   │   │   ├── razorpay_settings.py
-│   │   │   │   ├── razorpay_settings.json
-│   │   │   ├── razorpay_payment
-│   │   │   │   ├── razorpay_payment.py
-│   │   │   │   ├── razorpay_payment.json
-│   │   │   ├── razorpay_payment_transactions
-│   │   │   │   ├── razorpay_payment_transactions.py
-│   │   │   │   ├── razorpay_payment_transactions.json
-│   │   │   ├── razorpay_settlement
-│   │   │   │   ├── razorpay_settlement.py
-│   │   │   │   ├── razorpay_settlement.json
-│   │   │   ├── razorpay_settlement_transactions
-│   │   │   │   ├── razorpay_settlement_transactions.py
-│   │   │   │   ├── razorpay_settlement_transactions.json
-│   │   │   ├── razorpay_analytics
+│   │   │   ├── quotation_print.html
+│   ├── templates/
+│   │   ├── __init__.py
+│   │   ├── pages/
+│   │   │   ├── __init__.py
+│   ├── razorpay_integration/
+│   │   ├── __init__.py
+│   │   ├── dashboard_chart/
+│   │   ├── doctype/
+│   │   │   ├── razorpay_analytics/
+│   │   │   │   ├── __init__.py
 │   │   │   │   ├── razorpay_analytics.py
 │   │   │   │   ├── razorpay_analytics.json
-│   │   │   ├── razorpay_virtual_account
+│   │   │   ├── razorpay_payment/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── razorpay_payment.py
+│   │   │   │   ├── razorpay_payment.json
+│   │   │   ├── razorpay_payment_transactions/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── razorpay_payment_transactions.py
+│   │   │   │   ├── razorpay_payment_transactions.json
+│   │   │   ├── razorpay_settings/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── razorpay_settings.py
+│   │   │   │   ├── razorpay_settings.json
+│   │   │   ├── razorpay_settlement/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── razorpay_settlement.py
+│   │   │   │   ├── razorpay_settlement.json
+│   │   │   ├── razorpay_settlement_transactions/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── razorpay_settlement_transactions.py
+│   │   │   │   ├── razorpay_settlement_transactions.json
+│   │   │   ├── razorpay_virtual_account/
+│   │   │   │   ├── __init__.py
 │   │   │   │   ├── razorpay_virtual_account.py
 │   │   │   │   ├── razorpay_virtual_account.json
-│   │   ├── __init__.py
-│   │   ├── razorpay_client.py
-│   │   ├── utils.py
-│   │   ├── zohocliq.py
-│   │   ├── receipt_generator.py
-│   │   ├── dashboard.py
-│   │   ├── reports
-│   │   │   ├── payment_link_transactions
+│   │   ├── reports/
+│   │   │   ├── payment_link_transactions/
+│   │   │   │   ├── __init__.py
 │   │   │   │   ├── payment_link_transactions.py
 │   │   │   │   ├── payment_link_transactions.json
-│   │   └── hooks.py
-├── setup.py
-├── requirements.txt
-└── README.md
+│   │   ├── workspace/
+│   │   │   ├── razorpay/
+│   │   │   │   ├── razorpay.json
+│   ├── www/
+│   │   ├── __init__.py
+│   ├── dashboard.py
+│   ├── hooks.py
+│   ├── modules.txt
+│   ├── patches.txt
+│   ├── razorpay_client.py
+│   ├── receipt_generator.py
+│   ├── utils.py
+│   ├── zohocliq.py

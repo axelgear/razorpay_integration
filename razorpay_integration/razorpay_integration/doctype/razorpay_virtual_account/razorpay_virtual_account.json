@@ -1,0 +1,87 @@
+{
+  "doctype": "Razorpay Virtual Account",
+  "issingle": 0,
+  "name": "Razorpay Virtual Account",
+  "fields": [
+    {
+      "fieldname": "customer",
+      "fieldtype": "Link",
+      "options": "Customer",
+      "label": "Customer",
+      "reqd": 1
+    },
+    {
+      "fieldname": "customer_razorpay_id",
+      "fieldtype": "Data",
+      "label": "Customer Razorpay ID",
+      "read_only": 1
+    },
+    {
+      "fieldname": "quotation",
+      "fieldtype": "Link",
+      "options": "Quotation",
+      "label": "Quotation"
+    },
+    {
+      "fieldname": "project",
+      "fieldtype": "Link",
+      "options": "Project",
+      "label": "Project"
+    },
+    {
+      "fieldname": "sales_order",
+      "fieldtype": "Link",
+      "options": "Sales Order",
+      "label": "Sales Order"
+    },
+    {
+      "fieldname": "virtual_account_id",
+      "fieldtype": "Data",
+      "label": "Virtual Account ID",
+      "read_only": 1
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Data",
+      "label": "Description"
+    },
+    {
+      "fieldname": "amount_expected",
+      "fieldtype": "Currency",
+      "label": "Amount Expected"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "active\nclosed",
+      "label": "Status"
+    },
+    {
+      "fieldname": "close_by",
+      "fieldtype": "Date",
+      "label": "Close By"
+    },
+    {
+      "fieldname": "receivers",
+      "fieldtype": "Table",
+      "options": "Razorpay Virtual Account Receiver",
+      "label": "Receivers"
+    },
+    {
+      "fieldname": "created_at",
+      "fieldtype": "Datetime",
+      "label": "Created At",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

@@ -5,17 +5,18 @@ frappe.ui.form.on('Customer', {
                 {
                     fieldname: 'description',
                     fieldtype: 'Data',
-                    label: 'Description'
+                    label: 'Description',
+                    default: `Virtual Account for Customer ${frm.doc.name}`
                 },
                 {
                     fieldname: 'amount',
                     fieldtype: 'Currency',
-                    label: 'Expected Amount'
+                    label: 'Amount'
                 },
                 {
                     fieldname: 'receiver_types',
                     fieldtype: 'Select',
-                    label: 'Receiver Type',
+                    label: 'Receiver Types',
                     options: ['bank_account', 'qr_code', 'tpv'],
                     default: 'bank_account'
                 },
@@ -25,10 +26,6 @@ frappe.ui.form.on('Customer', {
                     label: 'Close By'
                 }
             ], function (values) {
-                if (values.close_by && values.close_by < frappe.datetime.nowdate()) {
-                    frappe.msgprint('Close By date must be in the future.');
-                    return;
-                }
                 frappe.call({
                     method: 'razorpay_integration.razorpay_integration.utils.create_virtual_account',
                     args: {
@@ -40,7 +37,7 @@ frappe.ui.form.on('Customer', {
                     },
                     callback: function (r) {
                         if (r.message) {
-                            frappe.msgprint('Virtual Account Created Successfully: ' + r.message);
+                            frappe.msgprint(`Virtual Account Created: ${r.message}`);
                             frm.reload_doc();
                         }
                     }

@@ -1,10 +1,10 @@
 app_name = "razorpay_integration"
 app_title = "Razorpay Integration"
-app_publisher = "Your Name"
+app_publisher = "Rejith R"
 app_description = "Razorpay Integration for ERPNext"
 app_icon = "octicon octicon-credit-card"
 app_color = "blue"
-app_email = "your.email@example.com"
+app_email = "rejithr1995@gmail.com"
 app_license = "MIT"
 
 webhooks = {

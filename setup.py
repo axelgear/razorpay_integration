@@ -8,7 +8,9 @@ setup(
     install_requires=[
         "frappe",
         "razorpay",
-        "requests"
+        "requests",
+        "qrcode",
+        "Pillow"
     ],
     author="Rejith R",
     author_email="rejithr1995@gmail.com",

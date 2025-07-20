@@ -1,0 +1,35 @@
+{
+  "doctype": "Razorpay Analytics",
+  "issingle": 0,
+  "name": "Razorpay Analytics",
+  "fields": [
+    {
+      "fieldname": "analytics_type",
+      "fieldtype": "Select",
+      "label": "Analytics Type",
+      "options": "Payment Summary\nSettlement Summary",
+      "reqd": 1
+    },
+    {
+      "fieldname": "data",
+      "fieldtype": "JSON",
+      "label": "Data"
+    },
+    {
+      "fieldname": "created_at",
+      "fieldtype": "Datetime",
+      "label": "Created At",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

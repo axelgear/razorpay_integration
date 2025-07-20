@@ -1,0 +1,92 @@
+{
+  "doctype": "Razorpay Settlement",
+  "issingle": 0,
+  "name": "Razorpay Settlement",
+  "fields": [
+    {
+      "fieldname": "settlement_id",
+      "fieldtype": "Data",
+      "label": "Settlement ID",
+      "read_only": 1
+    },
+    {
+      "fieldname": "amount",
+      "fieldtype": "Currency",
+      "label": "Amount"
+    },
+    {
+      "fieldname": "amount_settled",
+      "fieldtype": "Currency",
+      "label": "Amount Settled"
+    },
+    {
+      "fieldname": "amount_pending",
+      "fieldtype": "Currency",
+      "label": "Amount Pending"
+    },
+    {
+      "fieldname": "amount_reversed",
+      "fieldtype": "Currency",
+      "label": "Amount Reversed"
+    },
+    {
+      "fieldname": "fees",
+      "fieldtype": "Currency",
+      "label": "Fees"
+    },
+    {
+      "fieldname": "tax",
+      "fieldtype": "Currency",
+      "label": "Tax"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Data",
+      "label": "Status"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Data",
+      "label": "Description"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Table",
+      "options": "Note",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "utr",
+      "fieldtype": "Data",
+      "label": "UTR"
+    },
+    {
+      "fieldname": "created_at",
+      "fieldtype": "Datetime",
+      "label": "Created At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "settlement_type",
+      "fieldtype": "Select",
+      "options": "Regular\nOn-Demand",
+      "label": "Settlement Type"
+    },
+    {
+      "fieldname": "transactions",
+      "fieldtype": "Table",
+      "options": "Razorpay Settlement Transactions",
+      "label": "Transactions"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

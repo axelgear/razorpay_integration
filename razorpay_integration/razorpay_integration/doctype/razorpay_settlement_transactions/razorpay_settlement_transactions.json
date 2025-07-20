@@ -1,0 +1,116 @@
+{
+  "doctype": "Razorpay Settlement Transactions",
+  "issingle": 0,
+  "name": "Razorpay Settlement Transactions",
+  "fields": [
+    {
+      "fieldname": "entity_id",
+      "fieldtype": "Data",
+      "label": "Entity ID",
+      "read_only": 1
+    },
+    {
+      "fieldname": "type",
+      "fieldtype": "Data",
+      "label": "Type"
+    },
+    {
+      "fieldname": "debit",
+      "fieldtype": "Currency",
+      "label": "Debit"
+    },
+    {
+      "fieldname": "credit",
+      "fieldtype": "Currency",
+      "label": "Credit"
+    },
+    {
+      "fieldname": "amount",
+      "fieldtype": "Currency",
+      "label": "Amount"
+    },
+    {
+      "fieldname": "currency",
+      "fieldtype": "Data",
+      "label": "Currency"
+    },
+    {
+      "fieldname": "fee",
+      "fieldtype": "Currency",
+      "label": "Fee"
+    },
+    {
+      "fieldname": "tax",
+      "fieldtype": "Currency",
+      "label": "Tax"
+    },
+    {
+      "fieldname": "on_hold",
+      "fieldtype": "Check",
+      "label": "On Hold"
+    },
+    {
+      "fieldname": "settled",
+      "fieldtype": "Check",
+      "label": "Settled"
+    },
+    {
+      "fieldname": "created_at",
+      "fieldtype": "Datetime",
+      "label": "Created At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "settled_at",
+      "fieldtype": "Datetime",
+      "label": "Settled At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "settlement_id",
+      "fieldtype": "Data",
+      "label": "Settlement ID",
+      "read_only": 1
+    },
+    {
+      "fieldname": "settlement_utr",
+      "fieldtype": "Data",
+      "label": "Settlement UTR"
+    },
+    {
+      "fieldname": "payment_id",
+      "fieldtype": "Data",
+      "label": "Payment ID"
+    },
+    {
+      "fieldname": "order_id",
+      "fieldtype": "Data",
+      "label": "Order ID"
+    },
+    {
+      "fieldname": "method",
+      "fieldtype": "Data",
+      "label": "Method"
+    },
+    {
+      "fieldname": "card_network",
+      "fieldtype": "Data",
+      "label": "Card Network"
+    },
+    {
+      "fieldname": "card_issuer",
+      "fieldtype": "Data",
+      "label": "Card Issuer"
+    },
+    {
+      "fieldname": "card_type",
+      "fieldtype": "Data",
+      "label": "Card Type"
+    },
+    {
+      "fieldname": "dispute_id",
+      "fieldtype": "Data",
+      "label": "Dispute ID"
+    }
+  ]
+}

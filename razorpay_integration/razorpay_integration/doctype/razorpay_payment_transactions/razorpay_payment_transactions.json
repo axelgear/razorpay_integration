@@ -1,0 +1,8 @@
+{
+  "doctype": "Report",
+  "name": "Payment Link Transactions",
+  "ref_doctype": "Razorpay Payment",
+  "report_type": "Script Report",
+  "is_standard": "Yes",
+  "module": "Razorpay Integration"
+}

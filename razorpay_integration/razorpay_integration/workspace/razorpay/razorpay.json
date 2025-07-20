@@ -1,0 +1,62 @@
+{
+  "category": "Modules",
+  "charts": [],
+  "creation": "2025-07-20 13:55:00",
+  "developer_mode_only": 0,
+  "disable_user_customization": 0,
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "hide_custom": 0,
+  "icon": "octicon octicon-credit-card",
+  "idx": 0,
+  "is_default": 0,
+  "is_standard": 1,
+  "label": "Razorpay",
+  "links": [
+    {
+      "icon": "",
+      "label": "Razorpay Integration Settings",
+      "link_to": "Razorpay Integration Settings",
+      "link_type": "DocType",
+      "type": "Link"
+    },
+    {
+      "icon": "",
+      "label": "Razorpay Payment",
+      "link_to": "Razorpay Payment",
+      "link_type": "DocType",
+      "type": "Link"
+    },
+    {
+      "icon": "",
+      "label": "Razorpay Virtual Account",
+      "link_to": "Razorpay Virtual Account",
+      "link_type": "DocType",
+      "type": "Link"
+    },
+    {
+      "icon": "",
+      "label": "Razorpay Settlement",
+      "link_to": "Razorpay Settlement",
+      "link_type": "DocType",
+      "type": "Link"
+    },
+    {
+      "icon": "",
+      "label": "Payment Link Transactions",
+      "link_to": "Payment Link Transactions",
+      "link_type": "Report",
+      "type": "Link"
+    }
+  ],
+  "modified": "2025-07-20 13:55:00",
+  "modified_by": "Administrator",
+  "module": "Razorpay Integration",
+  "name": "Razorpay",
+  "owner": "Administrator",
+  "pin_to_bottom": 0,
+  "pin_to_top": 0,
+  "shortcuts": []
+}

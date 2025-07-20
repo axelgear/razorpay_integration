@@ -1,0 +1,7 @@
+Razorpay Integration Settings
+Razorpay Payment
+Razorpay Virtual Account
+Razorpay Settlement
+Razorpay Payment Transactions
+Razorpay Settlement Transactions
+Razorpay Analytics
